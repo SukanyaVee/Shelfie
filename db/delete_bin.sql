@@ -1,0 +1,1 @@
+DELETE FROM bin WHERE id IS $1;
