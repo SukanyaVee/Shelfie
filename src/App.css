@@ -1,28 +1,73 @@
+*{
+      /* Simulation-1 24F */
+  box-sizing: border-box; 
+      /* Simulation-1 23D */  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 14px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
+  /* Simulation-1 22C-2 */
 .App-header {
+        /* Simulation-1 23E */
   background-color: rgb(171, 42, 25);
-  height: 150px;
+  height: 100px;
+    /* Simulation-1 24E */
   padding: 20px;
   color: white;
+  margin: auto;
+    /* Simulation-1 25F 27E 27C 27D 27F 27G */
+  display: flex;
+  flex-direction: row;
+	flex-wrap: nowrap;
+  justify-content: space-around;
+	align-items: center;
+}
+
+.App-logo {
+  width: 80px;
+    /* Simulation-1 24C */
+margin-left: 20px;
 }
 
 .App-title {
   font-size: 1.5em;
+  flex: 1;
+  margin-left: 20px;
 }
 
-.App-intro {
+main {
+   /* Simulation-1 23D */
+  color: black
+}
+/* .App-intro {
   font-size: large;
+} */
+
+input {
+    /* Simulation-1 24D */
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Shelf-button {
+  background-color: rgb(211, 71, 53);
+  height: 20px;
+  padding: 30px;
+  color: white;
+}
+
+.Bin-button {
+  background-color: rgb(237, 107, 90);
+  height: 20px;
+  padding: 30px;
+  color: white;
+}
+
+  /* Simulation-1 22C-1 */
+#Action-button {
+  background-color: grey
 }

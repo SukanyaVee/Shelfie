@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css'; //Simulation-1 37E-1
 
-class App extends Component {
+class BinEdit extends Component {
     constructor(props){ //Simulation-1 36I
         super()
         this.state = { //Simulation-1 36C
@@ -37,20 +37,20 @@ class App extends Component {
 
   render() {//Simulation-1 36F
     return (
-      <div className="Bin">
-          Name:
+      <div className="Bin"> {/*Simulation-1 54G below*/}
+          <h6>Name:</h6>
           <Input value={this.state.name} onChange={event=>{this.setState({name: event.target.value})}}/>
-          Price:
+          <h6>Price:</h6>
           <Input value={this.state.price} onChange={event=>{this.setState({price: parseInt(event.target.value,10)})}}/> 
 
-          <button className="BinButton" onClick={event=>{
+          <button id="Action-button" onClick={event=>{
                 this.setState({tempEdit: !tempEdit})
                 axios.put(`http://localhost:3000/api/shelf/${this.state.id}`,{name: this.state.name, price: this.state.price}).then(resp=>{
                   this.setState({
                     name: resp.data.product.name,
                     price: resp.data.product.price})
                 }).catch(error=>console.log(error))}}>{tempEdit? this.setState({edit: 'Edit'}):  this.setState({edit: 'Save'})/*Simulation-1 36G*/} </button>
-          <button className="BinButton" onClick={event=>{
+          <button id="Action-button" onClick={event=>{
                 deleteBin(event);
                 location.href = "./shelfpageNew";}}>Edit</button>>Delete</button>
       </div>
